@@ -7,9 +7,14 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
- console.log(cardsEl)
 
-function startgame() {
+
+function startGame() {
+    renderGame()
+}
+
+
+function renderGame() {
 
     cardsEl.textContent = "Cards: " + firstCard + " " + secondCard
 
@@ -28,5 +33,13 @@ function startgame() {
 }
 
 function newCard() {
-    console.log("clicked")
+
+    let card = 5
+
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard + " " + card
+
+    sum += card
+
+    renderGame()
+
 }
